@@ -21,8 +21,9 @@ def application(request):
     request data, with keys 'base64_html' and 'options'.
     The application will return a response with the PDF file.
     """
+
     if request.method != 'POST':
-        return
+        return Response("Hello from pdf-generator")
 
     request_is_json = request.content_type.endswith('json')
 
